@@ -1,0 +1,94 @@
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: flexible
+Description: The default skin for the Nivo Slider.
+Version: 1.0
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.theme-default_home .nivoSlider {
+	position:relative;
+	background:#fff url(loading2.gif) no-repeat 50% 50%;
+    width:900px; /* Make sure your images are the same size */
+    height:448px; /* Make sure your images are the same size */
+}
+.theme-default_home .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.theme-default_home .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-default_home .nivo-controlNav {
+	right: 73px;
+    position: absolute;
+    top: 21px;
+}
+.theme-default_home .nivo-controlNav a {
+	display:block;
+	width:13px;
+	height:13px;
+	background:url(bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+	-webkit-transition: none !important; 
+	-moz-transition: none !important; 
+	transition: none !important;
+}
+.theme-default_home .nivo-controlNav a.active {
+	background-position:0 -14px;
+}
+
+.theme-default_home .nivo-directionNav{
+	position: relative;
+	float: right;
+	right: 65px;
+	top: 14px;
+}
+
+.theme-default_home .nivo-directionNav a {
+	display:block;
+	width:25px;
+	height:25px;
+	background:url(nivo_arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	-webkit-transition: none !important; 
+	-moz-transition: none !important; 
+	transition: none !important;
+}
+.theme-default_home a.nivo-nextNav {
+	background-position:-26px 0;
+	left:27px;
+}
+.theme-default_home a.nivo-prevNav {
+	background-position:0 0;
+	right:0;
+}
+.theme-default_home a.nivo-nextNav:hover {
+	background-position:-26px -26px;
+	
+	left:27px;
+}
+.theme-default_home a.nivo-prevNav:hover {
+	background-position:0 -26px;
+	right:0;
+
+.theme-default_home .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-default_home .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-default_home .nivo-caption a:hover {
+    color:#fff;
+}

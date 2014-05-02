@@ -1,9 +1,1342 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 
+<!-- Allure v1.0  |  created by b2themes -->
+ 
+<html lang="en">
 <head>
-	<title>Farbod Kadkhoda</title>
-</head>
+<title>mafiashare.net - free themes & templates</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"	>
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="">
+<meta name="description" content="">
 
-<body>
-	<h1> HELLO WORLD!</h1>
+<!-- favicon -->
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="themes/default/default.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/galleryfilter.css">
+<link rel="stylesheet" type="text/css" media="screen" href="themes/default_home/default_home.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/default.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/blue.css" title="blue">
+
+<!-- 
+Choose your style 
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/darkorange.css" title="darkorange">
+<link rel="stylesheet" type="text/css" media="screen" href="css/darkblue.css" title="darkblue">
+<link rel="stylesheet" type="text/css" media="screen" href="css/red.css" title="red">
+<link rel="stylesheet" type="text/css" media="screen" href="css/green.css" title="green">
+<link rel="stylesheet" type="text/css" media="screen" href="css/yellow.css" title="yellow">
+<link rel="stylesheet" type="text/css" media="screen" href="css/grey_soft.css" title="grey_soft">
+<link rel="stylesheet" type="text/css" media="screen" href="css/bluegreen.css" title="bluegreen">
+<link rel="stylesheet" type="text/css" media="screen" href="css/pink.css" title="pink">
+<link rel="stylesheet" type="text/css" media="screen" href="css/purple.css" title="purple">
+-->
+
+
+<!-- fonts -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald">
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Load Scripts -->
+<script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="js/allure.js" type="text/javascript"></script>
+<script src="js/stickyPanel.js" type="text/javascript"></script>
+<script src="js/jquery-history.js" type="text/javascript"></script>
+<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+<script src="js/contact-form.js" type="text/javascript"></script>
+<script src="js/jQueryWaypoints.js" type="text/javascript"></script>
+<script src="js/jquery.cycle.all.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
+
+  <!-- Portfolio&Gallery overlay JS -->
+  <script type="text/javascript">
+   $(document).ready(function(){
+   		$('.proj, .galleryproj').hover(function(){
+    		$('.portfoliooverlay, .portfoliooverlay2',this).stop().fadeTo(300,1);
+   		},
+   		
+   		function(){
+    		$('.portfoliooverlay, .portfoliooverlay2',this).stop().fadeTo(300,0);
+  	 	});
+  	});
+  </script>
+  <!-- End Portfolio overlay JS -->
+
+ <!-- Nivo For HomePage -->
+ <script type="text/javascript">
+	$(window).load(function() {
+    	
+    	/*Start nivo function*/
+    	$('.home-slide div.nivoSlider').nivoSlider({
+	        effect: 'random', // Specify sets like: 'fold,fade, boxRain, boxRainReverse, boxRainGrow, boxRainGrowReverse'
+	        slices: 15, // For slice animations
+	        animSpeed: 800, // Slide transition speed
+	        pauseTime: 4000, // How long each slide will show
+	        startSlide: 0, // Set starting Slide (0 index)
+	        directionNav: true, // Next & Prev navigation
+	        directionNavHide: false, // Only show on hover
+	        controlNav: true, // 1,2,3... navigation
+	        controlNavThumbs: false, // Use thumbnails for Control Nav
+	        controlNavThumbsFromRel: false, // Use image rel for thumbs
+	        keyboardNav: true, // Use left & right arrows
+	        pauseOnHover: true, // Stop animation while hovering
+	        manualAdvance: false, // Force manual transitions
+	        captionOpacity: false, // Universal caption opacity
+	        prevText: false, // Prev directionNav text
+	        nextText: false, // Next directionNav text
+        });
+    	   
+});
+
+</script>
+
+  <!-- Script for Slider HomePage -->
+  <script type="text/javascript">
+	jQuery(document).ready(function() {
+		if (jQuery().slides) {
+	
+			jQuery('#slider').css({ display : 'block' });
+			jQuery("#slider").slides({			
+				width: 935,
+				generatePagination: false,
+				autoHeight: true
+			});	
+		}
+	});
+	
+		
+ </script>
+
+ <!-- Script Google Maps -->
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript">
+	  function initialize() {
+	  	
+		var latlng = new google.maps.LatLng(document.getElementById('gm_lat').value, document.getElementById('gm_lng').value);
+		var myOptions = {
+		  zoom: 15,
+		  center: latlng,
+		  mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+		
+		// Creating a marker and positioning it on the map
+			var marker = new google.maps.Marker({
+			  position: new google.maps.LatLng(document.getElementById('gm_lat').value, document.getElementById('gm_lng').value),
+			  map: map
+			});
+	  }
+
+	</script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.ff-items a').prettyPhoto({deeplinking: false, show_title: false, social_tools: ''});			
+			$("#map a[rel^='prettyPhoto']").prettyPhoto({
+				custom_markup: '<div id="map_canvas" style="width:1000px; height:500px"></div>',
+				changepicturecallback: function(){ initialize(); $('#map_canvas').find('img').animate({
+					'opacity':'1 !important',
+					'filter':'alpha(opacity=100) !important'
+				}); }
+			});
+			/* FADE IMAGES */
+			$('.mapimg').append('<span class="hover"></span>').each(function () {
+				var $span = $('> span.hover', this).css('opacity', 0);
+			 	$(this).hover(function () {
+			    $span.stop().fadeTo(500, 1);
+			 	}, function () {
+			   		$span.stop().fadeTo(500, 0);
+			  	});
+			});
+		});
+	</script>
+	
+	
+</head>
+<body>	
+    
+    <!-- start Header -->       
+	<header>
+		<div class="top-bar"></div>
+		<div id="header">
+			
+			<!-- logo -->
+			<h3 id="logo">
+				<a href="#home" tabindex="-1">Allure</a>
+			</h3>
+			
+			<!-- <h6>Put your slogan here</h6>  -->
+			
+			<!-- Start MENU -->
+			<nav id="nav">
+				<ul class="clearfix">
+					<li><a class="selected" href="#home" tabindex="-1">Home</a></li>
+					<li><a href="#work" tabindex="-1">Work</a></li>
+					<li><a href="#gallery" tabindex="-1">Gallery</a></li>
+					<li><a href="#about" tabindex="-1">About</a></li>
+					<li><a href="#services" tabindex="-1">Services</a></li>
+					<li><a href="#contact" tabindex="-1">Contact</a></li>
+					<li><a href="http://themeforest.net/item/allure-html5-portfolio-theme/1181171?WT.ac=new_item&WT.seg_1=new_item&WT.z_author=b2themes" tabindex="-1">Buy</a></li>
+				</ul>
+			</nav>
+			<!-- End MENU -->
+		</div>	
+	</header>
+	<!-- end Header -->
+	
+	<!-- start Main Content -->	
+	<div id="wrapper">
+		<div id="white_content">
+			
+			<!-- Start HOME Section -->
+			<section id="home">
+							
+				<!-- BEGIN #slider -->
+                <div id="slider">
+                	
+                	<!--Start Slider Nav-->
+                	<div class="slides-nav"> 
+                    
+                        <div class="arrow-left"><a href="#" class="prev">Previous Slide</a></div> 
+                        <div class="arrow-right"><a href="#" class="next">Next Slide</a></div>
+                   
+                    </div> 
+                    
+                	<!--Start SliderContainer-->
+                	<div class="slides_container">
+                    	
+                    	<!-- slider Type 1 -->
+                        <div id="count-1">
+                        
+                            <div class="slide">	
+                            	<div class="slide-type1">
+                                    <h3>Welcome to Allure! A Portfolio theme by b2themes.</h3>
+									<p><img src="img/slide-img/slide1.jpg" alt="" title="slide" width="938" height="324" class="slide1"/></p>
+                                	
+                                	<div class="txt-st1" style="margin-bottom: 10px;">
+                                		<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                		
+                                		<a href="#work" class="blue-button">OUR WORK</a>
+                                	
+                                	</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- slider Type 2 -->
+                    	<div id="count-2">
+                        
+                            <div class="slide">	
+                            	<div class="slide-type2">
+                                    <img src="img/slide-img/slide2.jpg" alt="" title="slide" width="545" height="466" class="imac"/>
+                                	<div class="txt-st2">
+                                		<h3>Awesome OnePage HTML5 Template</h3>
+                                		<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words<br/><br/><i><span style="font-size:11px;">" Printer took a galley of type and scrambled it to make a type specimen book."</span></i></p>
+                                		
+                                		<a href="http://themeforest.net/item/allure-html5-portfolio-theme/1181171?WT.ac=new_item&WT.seg_1=new_item&WT.z_author=b2themes" class="green-button" style="top: 25px;position:relative;">Buy it Now </a>
+                                	
+                                	</div>
+                                </div>
+                            
+                            </div>
+                        
+                        </div>
+                       
+                       <!-- slider Type 3 -->
+                       <div id="count-3">
+                        
+                            <div class="slide">	
+                            	<div class="slide-type3">                                  
+									<div class="home-slide theme-default_home">
+		      							<div id="slider8" class="nivoSlider">
+		          							<img src="projects/home1.jpg" alt="">
+		          							<img src="projects/home2.jpg" alt="">
+		      								<img src="projects/home1.jpg" alt="">		          									          			
+		          							
+		          						</div>
+									</div>
+									
+                                	<h3>Welcome to Allure! A Portfolio theme by b2themes.</h3>
+                                	
+                                	<div class="txt-st3">
+	                                	<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus.</p>
+                                	</div>
+                                	
+                                </div>
+                            
+                            </div>
+                        
+                        </div>
+                        
+                        <!-- slider Type 4 -->
+                        <div id="count-4">
+                        
+                            <div class="slide">	
+                            	<div class="slide-type3">                                  
+									<div class="video">
+										
+										<!-- video -->	
+										<iframe src="http://player.vimeo.com/video/30731320?title=0&amp;byline=0&amp;portrait=0" width="850" height="478" ></iframe>
+                                	</div>
+                                	<h3>Welcome to Allure! A Portfolio theme by b2themes.</h3>
+                                	
+                                	<div class="txt-st3">
+	                                	<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus</p>
+                                	</div>
+                                </div>
+                            
+                            </div>
+                        
+                        </div>
+                        
+                       
+                    </div>                                  
+                	<!-- END #sliderContainer -->
+                </div>
+                <!-- END #slider -->
+                
+                <!-- start Last Project -->
+                 <div class="last-projects grid_12" style="margin:0;">
+                 	<div class="project-1">
+                    	<div class="project-img">
+                           <img src="img/l-proj.jpg" alt="" />
+                        </div>
+                                			
+                        <div class="project_text">
+                        	<h3>Unique&amp;Minimal Design</h3>
+                            
+                            <p>There are many variations passages of Lorem Ipsum available...</p>
+                                				
+                            <a href="#work" class="view-more">View More</a>
+                                				
+                       </div>
+                    </div>
+                    
+                    <div class="project-1" style="margin-left: 13px;">
+                    	<div class="project-img">
+                           <img src="img/l-proj.jpg" alt="" />
+                        </div>
+                                			
+                        <div class="project_text">
+                        	<h3>Awesome Portfolio Slide</h3>
+                            
+                            <p>There are many variations passages of Lorem Ipsum available...</p>
+                                				
+                            <a href="#work" class="view-more">View More</a>
+                                				
+                       </div>
+                    </div>
+                    
+                    <div class="project-1" style="margin-left: 13px;">
+                    	<div class="project-img">
+                           <img src="img/l-proj.jpg" alt="" />
+                        </div>
+                                			
+                        <div class="project_text">
+                        	<h3>10 Pre-Styled Colors</h3>
+                            
+                            <p>There are many variations passages of Lorem Ipsum available...</p>
+                                				
+                            <a href="#work" class="view-more">View More</a>
+                                				
+                       </div>
+                    </div>
+               </div>  
+                                	
+			</section>
+			<!-- End HOME Section -->
+			
+			<!-- Start PROJECTS opt1 Section -->
+			<section id="work">
+				<div class="title-page container_12">
+					<div class="div-title-left" style="width:380px;"></div>
+					<h2>WORK</h2>
+					<div class="div-title-right" style="width:380px;"></div>
+				</div>
+				
+				<div class="work_container container_12" style="margin:0; padding:0;">
+					
+					<!-- item1 -->
+					<div class="project grid_3 clearfix" id="project_01">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							
+							<div class="portfoliooverlay">
+								<!-- you can add text to 
+									
+									<p>View Work</h2>
+								-->
+								
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					
+					<!-- item2 -->
+					<div class="project grid_3 clearfix" id="project_02">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 
+									<p>View Work</h2>
+								-->							
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- item3 -->
+					<div class="project grid_3 clearfix" id="project_03">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 			
+									<p>View Work</h2>
+								-->						
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- item4 -->
+					<div class="project-last grid_3 clearfix" id="project_04">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 			
+									<p>View Work</h2>
+								-->						
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					<!-- item5 -->
+					<div class="project grid_3 clearfix" id="project_05">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 			
+									<p>View Work</h2>
+								-->						
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- item6 -->
+					<div class="project grid_3 clearfix" id="project_06">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 			
+									<p>View Work</h2>
+								-->						
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- item7 -->
+					<div class="project grid_3 clearfix" id="project_07">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 			
+									<p>View Work</h2>
+								-->						
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- item8 -->
+					<div class="project-last grid_3 clearfix" id="project_08">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 			
+									<p>View Work</h2>
+								-->						
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- item9 -->
+					<div class="project grid_3 clearfix" id="project_09">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 			
+									<p>View Work</h2>
+								-->						
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- item10 -->
+					<div class="project grid_3 clearfix" id="project_10">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 			
+									<p>View Work</h2>
+								-->						
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- item11 -->
+					<div class="project grid_3 clearfix" id="project_11">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 			
+									<p>View Work</h2>
+								-->						
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- item12 -->
+					<div class="project-last grid_3 clearfix" id="project_12">
+						<a class="proj" href="#work-open">
+							<img alt="More Info" height="150" src="projects/thumb-img.jpg" width="220">
+							<div class="portfoliooverlay">
+								<!-- you can add text to 			
+									<p>View Work</h2>
+								-->						
+								<div class="moreinfo"></div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- Start WORK OPEN -->
+					<div id="work-open">
+						
+						<!-- PROJECT01 -->
+						<div class="openproject project_01">
+							<a class="close" href="#work" title=""></a>
+							
+							<!-- Start NIVO SLIDER -->
+							<div class="slides">
+								<div class="slideprojects theme-default">
+	      							<div id="slider1" class="nivoSlider">
+	          							<img src="projects/big-img2.jpg" alt="">
+	          							<img src="projects/big-img.jpg" alt="">
+	          							<img src="projects/big-img2.jpg" alt="">
+	          						</div>
+								</div>
+							</div>
+							
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>Awesome Portfolio Slide<span>21/11/2011</span></h3>
+									
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+									
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. </p>
+									
+									<a class="visitweb" href="javascript:;">Visit website &nbsp;&nbsp;&rarr;</a>
+
+
+								</div>
+							
+							</div>
+						</div>
+						
+						<!-- PROJECT02 -->
+						<div class="openproject project_02">
+							<a class="close" href="#work" title=""></a>
+							
+							<!-- Static Image -->
+							<div class="slides">
+								<div class="slideprojects theme-default">
+	      							<div id="slider2" class="nivoSlider">
+	          							<img src="projects/big-img2.jpg" alt="">
+	          							<img src="projects/big-img.jpg" alt="">
+	          							<img src="projects/big-img2.jpg" alt="">
+	          						</div>
+								</div>
+	          				</div>
+							
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>HTML5 Valid Code<span>20/11/2011</span></h3>
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+							</div>
+						</div>
+						
+						<!-- PROJECT03 -->
+						<div class="openproject project_03">
+							<a class="close" href="#work" title=""></a>
+							
+							<!-- Vimeo Video -->
+							<div class="slides">
+								<div id="video-block2">
+										<iframe src="http://player.vimeo.com/video/19766531?title=0&amp;byline=0&amp;portrait=0" width="940" height="468" >
+								</iframe>
+								</div>
+							</div>
+							
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>Video From Vimeo<span>20/11/2011</span></h3>
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+							</div>
+						</div>
+						
+						<!-- PROJECT04 -->
+						<div class="openproject project_04">
+							<a class="close" href="#work" title=""></a>
+							<div class="slides">
+								<div class="slideprojects theme-default">
+	      							<div id="slider3" class="nivoSlider">
+	          							<img src="projects/big-img2.jpg" alt="">
+	          							<img src="projects/big-img.jpg" alt="">
+	          							<img src="projects/big-img2.jpg" alt="">
+	          						</div>
+								</div>
+							</div>
+												
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>Full Documentation<span>2/11/2011</span></h3>
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+							</div>
+						</div>
+						
+						<!-- PROJECT05 -->
+						<div class="openproject project_05">
+							<a class="close" href="#work" title=""></a>
+							
+							<!-- Static Image -->
+							<div class="slides">
+								<img src="projects/big-img2.jpg" alt="">
+	          							
+	          				</div>
+							
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>Working Ajax Contact Form<span>12/10/2011</span></h3>
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+							</div>
+						</div>
+						
+						<!-- PROJECT06 -->
+						<div class="openproject project_06">
+							<a class="close" href="#work" title=""></a>
+							
+							<!-- Vimeo Video -->
+							<div class="slides">
+								<div id="video-block3">
+										<iframe src="http://player.vimeo.com/video/30698649?title=0&amp;byline=0&amp;portrait=0" width="940" height="468" >
+								</iframe>
+								</div>
+							</div>
+							
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>Envato WebSite<span>22/11/2011</span></h3>
+									
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+									
+									<a class="visitweb" href="javascript:;">Visit website &nbsp;&nbsp;&rarr;</a>
+									
+								</div>
+							
+							</div>
+						</div>
+						
+						<!-- PROJECT07 -->
+						<div class="openproject project_07">
+							<a class="close" href="#work" title=""></a>
+							
+							<!-- Start NIVO SLIDER -->
+							<div class="slides">
+								<div class="slideprojects theme-default">
+	      							<div id="slider4" class="nivoSlider">
+	          							<img src="projects/big-img2.jpg" alt="">
+	          							<img src="projects/big-img.jpg" alt="">
+	          							<img src="projects/big-img2.jpg" alt="">
+	          						</div>
+								</div>
+							</div>
+							
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>Cross-Browser<span>22/11/2011</span></h3>
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+							</div>
+						</div>
+						
+						<!-- PROJECT08 -->
+						<div class="openproject project_08">
+							<a class="close" href="#work" title=""></a>
+							
+							<!-- Static Image -->
+							<div class="slides">
+								<img src="projects/big-img.jpg" alt="">
+	          				</div>
+							
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>Easy to Customize<span>22/11/2011</span></h3>
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+							</div>
+						</div>
+						
+						
+						<!-- PROJECT09 -->
+						<div class="openproject project_09">
+							<a class="close" href="#work" title=""></a>
+							
+							<!-- Start NIVO SLIDER -->
+							<div class="slides">
+								<img src="projects/big-img.jpg" alt="">
+	          					
+							</div>
+							
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>Project09<span>22/11/2011</span></h3>
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+							</div>
+						</div>
+						
+						<!-- PROJECT10 -->
+						<div class="openproject project_10">
+							<a class="close" href="#work" title=""></a>
+							
+							<!-- Static Image -->
+							<div class="slides">
+								<img src="projects/big-img.jpg" alt="">
+	          				</div>
+	          				
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>Allur - OnePage Portfolio Theme<span>22/11/2011</span></h3>
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+							</div>
+						</div>
+						
+						<!-- PROJECT11 -->
+						<div class="openproject project_11">
+							<a class="close" href="#work" title=""></a>
+							
+							
+							<!-- Start NIVO SLIDER -->
+							<div class="slides">
+								<div class="slideprojects theme-default">
+	      							<div id="slider5" class="nivoSlider">
+	          							<img src="projects/big-img.jpg" alt="">
+	          							<img src="projects/big-img2.jpg" alt="">
+	          							<img src="projects/big-img.jpg" alt="">
+	          						</div>
+								</div>
+							</div>
+							
+							
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>One Page Theme<span>22/11/2011</span></h3>
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+							</div>
+						</div>
+						
+						<!-- PROJECT12 -->
+						<div class="openproject project_12">
+							<a class="close" href="#work" title=""></a>
+							
+							<!-- Vimeo Video -->
+							<div class="slides">
+								<div id="video-block4">
+										<iframe src="http://player.vimeo.com/video/19766531?title=0&amp;byline=0&amp;portrait=0" width="940" height="468" >
+								</iframe>
+								</div>
+							</div>
+							
+							<div class="slidecontent grid_12" style="margin:0;">
+								
+								<div class="project-title grid_12" style="margin:0;">
+									<h3>Last Project<span>22/11/2011</span></h3>
+								</div>
+								
+															
+								<div class="grid_6" style="margin:0;">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+								<div class="grid_5">
+									<p>Latin professor at Hampden-Sydney College in Virginia looked up one of the more obscure <a href="javscript:;">Latin words</a>,, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature</p>
+								</div>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Start PROJECTS opt1 Section -->
+			<section id="gallery">
+				<div class="title-page container_12" style="margin-bottom: 30px;margin-left: 10px;">
+					<div class="div-title-left" style="width:356px;"></div>
+					<h2>GALLERY</h2>
+					<div class="div-title-right" style="width:356px;"></div>
+				</div>
+				
+				<!-- start Gallery Content -->
+			    <div class="ff-container">
+					
+					<!-- start Categories -->
+					<input id="select-type-all" name="radio-set-1" type="radio" class="ff-selector-type-all" checked="checked" />
+					<label for="select-type-all" class="ff-label-type-all">All</label><span class="sep">/</span>
+					
+					<input id="select-type-1" name="radio-set-1" type="radio" class="ff-selector-type-1" />
+					<label for="select-type-1" class="ff-label-type-1">Web Design</label><span class="sep1">/</span>
+					
+					<input id="select-type-2" name="radio-set-1" type="radio" class="ff-selector-type-2" />
+					<label for="select-type-2" class="ff-label-type-2">Illustration</label><span class="sep2">/</span>
+					
+					<input id="select-type-3" name="radio-set-1" type="radio" class="ff-selector-type-3" />
+					<label for="select-type-3" class="ff-label-type-3">Photography</label>
+					
+					<div class="clr"></div>
+					
+					<!-- start Gallery itens -->
+					<ul class="ff-items">
+						
+						<!-- gallery item1 -->
+						<li class="ff-item-type-2">
+							<a href="projects/bigproject02.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								
+								<img src="projects/imggallery.jpg" alt="Image" />
+								
+								<div class="portfoliooverlay2">
+									<!-- you can add text to 			
+									<p>View Work</h2>
+									-->						
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+						</li>
+						
+						<!-- gallery item2 -->
+						<li class="ff-item-type-1">
+							<a href="projects/home_2.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+						</li>
+						
+						<!-- gallery item3 -->
+						<li class="ff-item-type-1">
+							<a href="projects/home1.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+						</li>
+						
+						<!-- gallery item4 -->
+						<li class="ff-item-type-2">
+							<a href="projects/home_2.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+							
+						</li>
+						
+						<!-- gallery item5 -->
+						<li class="ff-item-type-3">
+							<a href="projects/home1.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+							
+						</li>
+						
+						<!-- gallery item6 -->
+						<li class="ff-item-type-1">
+							<a href="projects/home1.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+							
+						</li>
+						
+						<!-- gallery item7 -->
+						<li class="ff-item-type-3">
+							<a href="projects/home1.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+						</li>
+						
+						<!-- gallery item8 -->
+						<li class="ff-item-type-1">
+							<a href="projects/home_2.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+						</li>
+						
+						<!-- gallery item9 -->
+						<li class="ff-item-type-2">
+							<a href="projects/home1.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>							
+						</li>
+						
+						<!-- gallery item10 -->
+						<li class="ff-item-type-2">
+							<a href="projects/home_2.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+							
+						</li>
+						
+						<!-- gallery item11 -->
+						<li class="ff-item-type-3">
+							<a href="projects/home1.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+							
+						</li>
+						
+						<!-- gallery item12 -->
+						<li class="ff-item-type-1">
+							<a href="projects/home1.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+							
+						</li>
+						
+						<!-- gallery item13 -->
+						<li class="ff-item-type-3">
+							<a href="projects/home1.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+						</li>
+						
+						<!-- gallery item14 -->
+						<li class="ff-item-type-1">
+							<a href="projects/home_2.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>
+						</li>
+						
+						<!-- gallery item15 -->
+						<li class="ff-item-type-2">
+							<a href="projects/home1.jpg" rel="prettyPhoto" title="Put your image title here" class="galleryproj">
+								<img src="projects/imggallery.jpg" alt="Image" />
+								<div class="portfoliooverlay2">
+									<div class="moreinfo2"></div>
+								</div>
+							</a>							
+						</li>
+						
+					</ul>
+				</div>
+			</section>
+			<!-- end gallery -->
+			
+			
+			<!-- Start ABOUT Section -->
+			<section id="about">	
+				<div class="title-page container_12">
+					<div class="div-title-left" style="width:342px;"></div>
+					<h2>ABOUT US</h2>
+					<div class="div-title-right" style="width:342px;"></div>
+				</div>
+				
+				<div class="container_12" style="margin:0;">
+					
+					<!-- About -->
+					<div class="grid_4" style="margin-left: 8px;">
+						<h6>A bit of my story...</h6>
+						<p>There are many variations of passages <a href="#contact" class="">Lorem Ipsum available</a> of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p><br>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p><br>
+						
+					</div>
+					
+					<div class="grid_4" style="position:relative; top: 36px; margin-left: 0;">
+						
+						<p>There are many variations of passages <a href="#contact" class="">Lorem Ipsum available</a> of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p><br>
+						
+						<a href="#contact" style="font-weight: 600;">Contact me for freelance work!</a>
+						
+					</div>
+					
+					<img src="img/picture.png" class="picture" alt="">
+					
+					<!-- Testimonials start -->
+					<div class="testimonials grid_9" style="margin-left: 8px; position: relative; top: 15px;">
+
+						<h6>What my Clients Say</h6>
+						
+						<div class="test-col1">
+							<div class="blockquote1-div">
+								<blockquote class="blockquote1">Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions.<br><span><b>Jonh Doe</b>, Allure</span></blockquote>
+						
+								<blockquote class="blockquote1">Lorem Ipsum passages, and more recently with desktop.<br><span><b>Jonh Doe</b>, b2themes</span></blockquote>
+								<blockquote class="blockquote1">Lorem Ipsum passages, and more recently with desktop publishing software. <br><span><b>Jonh Doe</b>, Themeforest</span></blockquote>
+								
+							</div>
+						</div>
+						<div class="test-col2">
+							<div class="blockquote1-div">
+								<blockquote class="blockquote1">Lorem Ipsum passages, and more recently. <br><span><b>Jonh Doe</b>, Envato</span></blockquote>
+						
+								<blockquote class="blockquote1">Lorem Ipsum passages, and more recently with desktop publishing software. <br><span><b>Jonh Doe</b>, Themeforest</span></blockquote>
+								
+								<blockquote class="blockquote1">Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions.<br><span><b>Jonh Doe</b>, Allure</span></blockquote>
+						
+							</div>
+						</div>
+						
+					</div>
+					
+				
+						
+				</div>
+			</section>
+			<!-- End ABOUT Section -->
+	
+			<!-- Start SERVICES Section -->
+			<section id="services">	
+				<div class="title-page container_12">
+					<div class="div-title-left" style="width:295px;"></div>
+					<h2>OUR SERVICES</h2>
+					<div class="div-title-right" style="width:295px;"></div>
+				</div>
+						
+				<div class="service-box grid_12" style="margin:0;">
+					<!-- Service#01 -->
+					<div class="service grid_4">
+						<div class="circle"><p class="icon1"></p></div>
+						<h6>Awesome Portfolio Slide</h6>
+						<p style="width: 280px;">Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+						
+					</div>
+					
+					<!-- Service#02 -->
+					<div class="service grid_4">
+						<div class="circle"><p class="icon2"></p></div>
+						<h6>Easy to Customize</h6>
+						<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+					</div>
+					
+					<!-- Service#03 -->
+					<div class="service grid_4" style="padding:0;">
+						<div class="circle"><p class="icon3"></p></div>
+						<h6>Full Documentation</h6>
+						<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+					</div>
+						
+					<!-- Service#04 -->
+					<div class="service grid_4" style="left: 5px;">
+						<div class="circle"><p class="icon4"></p></div>
+						<h6>Video Support</h6>
+						<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+					</div>
+					
+					<!-- Service#05 -->
+					<div class="service gri_4" style="left: 5px;">
+						<div class="circle"><p class="icon5"></p></div>
+						<h6>Ajax Contact Form</h6>
+						<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+					</div>
+					
+					<!-- Service#06 -->
+					<div class="service grid_4" style="padding:0;left: 5px;">
+						<div class="circle"><p class="icon6"></p></div>
+						<h6>Cross-Browser</h6>
+						<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+					</div>
+					
+				</div>
+				
+			</section>
+			<!-- End SERVICES Section -->
+			
+			<!-- Start CONTACTS Section -->
+			<section id="contact" class="container_12">
+				<div class="title-page container_12" style="left: 9px;">
+					<div class="div-title-left" style="width:337px;"></div>
+					<h2>CONTACTS</h2>
+					<div class="div-title-right" style="width:337px;"></div>
+				</div>
+				
+				<h6>Awesome AJAX Contact Form!</h6>
+				
+				<!-- START CONTACT FORM -->			
+				<div id="contact_form" class="grid_6" style="margin:0;">
+					<div class="form-success">
+	                	<p>Thank you, your message has been sent.</p>
+	            	</div>
+				
+					<div class="contact-form"> 
+	            		<form action="contact-form/send.php" method="post" class="form">   	
+	                    	<label>Name</label> 
+	                        <input class="text" type="text" name="name"> 
+	                            
+	                        <label>E-Mail</label> 
+	                        <input class="text" type="text" name="email"> 
+	                        
+	                        <!--     
+	                        <label>Subject</label> 
+	                        <input class="text" type="text" name="subject"> 
+	                         -->
+	                             
+	                        <label>Message</label> 
+	                        <textarea name="message" rows="8" cols="60"></textarea> 
+	                            
+	                        <a href="javascript:;" id="submit" class="button">Send Email</a>
+	                            
+	                         <div class="loading"></div> 
+	                    </form> 
+	                </div>
+				</div>
+				<!-- END CONTACT FORM -->
+				
+				<!-- START LOCATION -->
+				<div class="location grid_5">
+					<h6>Our Location</h6>
+					<!-- Social -->
+						<div class="social">
+							<ul>
+								<li><a href="javascript:;" class="facebook tooltip" title=""><span>Facebook</span></a></li>								
+								<li><a href="javascript:;" class="twitter tooltip" title=""><span>Twitter</span></a></li>
+								<li><a href="javascript:;" class="vimeo tooltip" title=""><span>Vimeo</span></a></li>
+								
+							</ul>
+						</div>
+						
+					<!-- GoogleMap -->
+					<div class="googlemap grid_5">
+						<div class="googlemaps" style="position:relative; top: 14px;">
+							<div id="map" style="">
+								<a class="mapimg" href="#?custom=true&amp;width=1000&amp;height=500" rel="prettyPhoto"><img src="img/map.jpg" alt="" class="mapimage img-5962 fade-image" title=""><span class="hover" style="opacity: 0; "></span></a>
+							</div>
+							<input type="hidden" id="gm_lat" value="34.03139">
+							<input type="hidden" id="gm_lng" value="-118.16861">
+						</div>
+						
+						<!-- Contacts -->
+						<div class="contacts">
+							<br><p>Phone: 888 777 999</p>
+							<p><a href="#">work@allur.com</a></p>
+							<p><a href="#">info@allur.com</a></p> 
+						
+						</div>
+									
+					</div>
+				</div>			
+			</section>
+			<!-- End CONTACTS Section -->	
+			
+			<!-- Start FOOTER Section -->
+			<div id="footer">
+				<p style="position:relative; float:left; left: 23px;">© Copyrights 2011 </p>
+				<p style="position:relative; float:right; right: 23px;">Powered by <a href="http://themeforest.net/user/b2themes">b2themes</a></p>
+			</div>
+			<!-- End FOOTER Section -->
+		</div>
+	</div>
+	<!-- end wrapper article -->
+	
+	<!-- Nivo for Projects -->
+<script type="text/javascript">
+	$(window).load(function() {
+    	/*Start nivo function*/
+    	$('.slideprojects div.nivoSlider').nivoSlider({
+	        effect: 'boxRainGrow', // Specify sets like: 'fold,fade, boxRain, boxRainReverse, boxRainGrow, boxRainGrowReverse'
+	        slices: 15, // For slice animations
+	        animSpeed: 1000, // Slide transition speed
+	        pauseTime: 5000, // How long each slide will show
+	        startSlide: 0, // Set starting Slide (0 index)
+	        directionNav: true, // Next & Prev navigation
+	        directionNavHide: true, // Only show on hover
+	        controlNav: false, // 1,2,3... navigation
+	        controlNavThumbs: false, // Use thumbnails for Control Nav
+	        controlNavThumbsFromRel: false, // Use image rel for thumbs
+	        keyboardNav: true, // Use left & right arrows
+	        pauseOnHover: true, // Stop animation while hovering
+	        manualAdvance: false, // Force manual transitions
+	        captionOpacity: false, // Universal caption opacity
+	        prevText: false, // Prev directionNav text
+	        nextText: false, // Next directionNav text
+        });
+    	   
+});
+
+</script>
+
 </body>
+
+</html>
